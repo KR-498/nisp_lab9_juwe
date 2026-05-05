@@ -1,0 +1,98 @@
+/* Import czcionki z Google Fonts */
+@import url('https://googleapis.com');
+
+:root {
+    --primary-color: #ff00ff; /* Neonowy róż */
+    --secondary-color: #00ffff; /* Cyjan */
+    --bg-dark: #0a0a0a;
+    --text-light: #ffffff;
+    --accent-yellow: #f0f000;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Energetyczny Nagłówek */
+header {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), 
+                url('https://unsplash.com') center/cover;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+h1 {
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--text-light);
+    text-shadow: 4px 4px 0px var(--primary-color), -2px -2px 0px var(--secondary-color);
+    letter-spacing: -2px;
+}
+
+/* Przycisk CTA - Kup bilet / Zobacz line-up */
+.cta-button {
+    margin-top: 2rem;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bg-dark);
+    background-color: var(--accent-yellow);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.cta-button:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 20px var(--accent-yellow);
+}
+
+/* Sekcja Line-up (Siatka) */
+.lineup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 10%;
+}
+
+.artist-card {
+    background: #1a1a1a;
+    border: 2px solid var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.artist-card:hover {
+    background: var(--secondary-color);
+    color: var(--bg-dark);
+}
+
+/* Animacja migania "Juwenalia" */
+.blink {
+    animation: blinker 1.5s linear infinite;
+    color: var(--primary-color);
+}
+
+@keyframes blinker {
+    50% { opacity: 0.4; }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+}
