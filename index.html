@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
- <meta charset="UTF-8">
- <title>Symulacja konfliktu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juwenalia AT Tarnów 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
- <h1>Hello AT!</h1>
+
+    <nav class="navbar">
+        <div class="logo">AT <span>TARNÓW</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Start</a></li>
+            <li><a href="#lineup">Line-up</a></li>
+            <li><a href="#tickets">Bilety</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>JUWENALIA <span>2024</span></h1>
+            <p>Największe studenckie święto w Tarnowie!</p>
+            <div id="countdown" class="timer">
+                <div class="time-part"><span id="days">00</span><p>dni</p></div>
+                <div class="time-part"><span id="hours">00</span><p>godz</p></div>
+                <div class="time-part"><span id="minutes">00</span><p>min</p></div>
+            </div>
+            <a href="#tickets" class="btn-main">KUP BILET</a>
+        </div>
+    </header>
+
+    <section id="lineup" class="lineup">
+        <h2>KTO WYSTĄPI?</h2>
+        <div class="grid">
+            <div class="card"><h3>Gwiazda Wieczoru</h3><p>Piątek, 20:00</p></div>
+            <div class="card"><h3>Topowy DJ</h3><p>Piątek, 22:00</p></div>
+            <div class="card"><h3>Lokalny Band</h3><p>Sobota, 18:00</p></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
